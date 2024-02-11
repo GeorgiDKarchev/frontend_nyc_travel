@@ -18,9 +18,13 @@ const NavBar =()=>{
                 <li onClick={()=>{setMenu('home')}}>About {menu==='about'?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu('tours')}}>Additional Tours{menu==='tours'?<h/>:<></>}</li>
             </ul>
+            <div className='login'>
+                <img className = 'shopping-cart' src='https://static.vecteezy.com/system/resources/previews/000/356/583/original/vector-shopping-cart-icon.jpg'></img>
+                <button>Log in</button>
+            </div>
 
         </div>
-    )
+    );
 }
 
 
