@@ -40,7 +40,7 @@ function App() {
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/login" element={<LoginSignup />}></Route>
           
-           {/* route path for tours (it does not work at the moment!!!!????) */}
+           {/* route path for tours*/}
           <Route path="/tours" element={<ToursList tours={tours}/>}/>
         </Routes>
       </BrowserRouter>

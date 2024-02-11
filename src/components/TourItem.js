@@ -6,22 +6,35 @@ function TourItem({ tour }) {
   const { _id, tour_name, img_src, description, price} = tour;
 
   return (
-    <Card
-      style={{ width: "14rem", margin: "10px", backgroundColor: "#221f1f" }}
-    >
-      <Link to={`/tours/${_id}`} style={{ color: "#f5f5f1" }}>
-        <Card.Title>{tour_name}</Card.Title>
 
-        {img_src ? (
-          <Card.Img src={img_src} alt={tour_name} />
-        ) : (
-          <Card.Img
-            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
-            alt=""
-          />
-        )}
-      </Link>
-    </Card>
+    <div className="card">
+        <h2>Tours list</h2>
+       <ul>
+        <li>{tour._id}</li>
+        <li>{tour.tour_name}</li>
+        <li>{tour.img_src}</li>
+        <li>{tour.description}</li>
+        <li>{tour.price}</li>
+       </ul>
+    </div>
+
+
+    // <Card
+    //   style={{ width: "14rem", margin: "10px", backgroundColor: "#ffffff" }}
+    // >
+    //   <Link to={`/tours/${_id}`} style={{ color: "black" }}>
+    //     <Card.Title>{tour_name}</Card.Title>
+
+    //     {img_src ? (
+    //       <Card.Img src={img_src} alt={tour_name} />
+    //     ) : (
+    //       <Card.Img
+    //         src="https://images.pexels.com/photos/2274729/pexels-photo-2274729.jpeg?auto=compress&cs=tinysrgb&w=600"
+    //         alt=""
+    //       />
+    //     )}
+    //   </Link>
+    // </Card>
   );
 }
 
