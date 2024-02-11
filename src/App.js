@@ -1,17 +1,14 @@
+import './App.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import AdditionalTours from './pages/AdditionalTours';
+import About from './pages/About';
+import Cart from './pages/Cart';
+import  LoginSignup from './pages/LoginSignup';
+
 import React, { useEffect, useState } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-//import diferent pages
-import Home from "./pages/Home";
-import AdditionalTours from "./pages/AdditionalTours";
-import About from "./pages/About";
-import Cart from "./pages/Cart";
-import LoginSignup from "./pages/LoginSignup";
-//import Tour components
-import TourDetails from "./components/TourDetails";
-import TourItem from "./components/TourItem";
-import ToursList from "./components/ToursList";
+
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -29,21 +26,22 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div >
+      {/* Wrapping the application with BrowserRouter, to enable client-side routing */}
       <BrowserRouter>
         <NavBar></NavBar>,
+
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/additional-tours" element={<AdditionalTours />}></Route>
-          <Route path=":/tourId" element={<About />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/login" element={<LoginSignup />}></Route>
-          
-           {/* route path for tours*/}
-          <Route path="/tours" element={<ToursList tours={tours}/>}/>
-        </Routes>
+          <Route path='/' element={<Home tours={tours}/>}></Route>
+          <Route path='/about' element={<About/>}></Route>
+          <Route path='/additional-tours\' element={<AdditionalTours/>}></Route>
+            <Route path=':/tourId' element={<About/>}></Route>
+          <Route path='/cart' element={<Cart/>}></Route>
+          <Route path='/login' element={<LoginSignup/>}></Route>
+        </Routes>  
+         
       </BrowserRouter>
+      
     </div>
   );
 }
