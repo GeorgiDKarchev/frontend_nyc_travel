@@ -6,6 +6,7 @@ import AdditionalTours from './pages/AdditionalTours';
 import About from './pages/About';
 import Cart from './pages/Cart';
 import  LoginSignup from './pages/LoginSignup';
+import Footer from './components/Footer'
 
 import React, { useEffect, useState } from "react";
 
@@ -26,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div >
+    <div className='body' >
       {/* Wrapping the application with BrowserRouter, to enable client-side routing */}
       <BrowserRouter>
         <NavBar></NavBar>,
@@ -39,6 +40,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}></Route>
           <Route path='/login' element={<LoginSignup/>}></Route>
         </Routes>  
+        <Footer></Footer>
          
       </BrowserRouter>
       

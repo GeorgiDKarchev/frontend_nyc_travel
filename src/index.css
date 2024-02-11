@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  border:1px solid black;
 
 }
 /* Logo picture in nav bar */
@@ -23,6 +24,36 @@
   margin-right: 15px;
 }
 
+.body{
+  
+}
+
+h1{
+  text-align: center;
+}
+
+/* Log in || Sign up */
+/* .loginsignup{
+  width: 80%;
+  height: 80vh;
+  background-color: beige;
+  padding-top: 100px;
+} */
+/* Tours */
+.bodyTours{
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
+  display: flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap: wrap;
+  gap: 150px;
+  margin-left: 50px;
+  margin-right: 50;
+}
+
+ 
 /* Footer */
 .footer{
   display: flex;
@@ -39,22 +70,33 @@
   width: 30px;
   height: 30px;
 }
+
+
+/* Footer */
+.footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  justify-content: center;
+
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  border:1px solid black;
+
+}
+
+.insta img{
+  width: 30px;
+  height: 30px;
+}
+.facebook img{
+  width: 30px;
+  height: 30px;
+}
 /* Log in || Sign up */
 /* .loginsignup{
   width: 80%;
   height: 80vh;
   background-color: beige;
-  padding-top: 100px;
-} */
-/* Tours */
-.bodyTourse{
-  /* display: flex;
-  flex-direction: row;
-  align-items: center; */
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-left: 50px;
-  margin-right: 50;
-}
+  padding-top: 100px;*/

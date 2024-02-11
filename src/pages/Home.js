@@ -6,7 +6,7 @@ const Home = ({tours}) => {
     return (
         <div>
             <h1>Our tour list</h1>
-            <div className="bodyTourse">
+            <div className="bodyTours">
                 {tours.length>=1?(
                     tours.map((tour) => <ToursItem tour={tour} key={tour._id} />)
                     ) : (
