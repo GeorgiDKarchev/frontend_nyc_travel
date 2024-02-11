@@ -14,7 +14,7 @@ const NavBar =()=>{
                 <p>Traveler</p>
             </div>
             <ul className='navMenu'>
-                {/* On every click on menu item, a line will uppear under it */}
+                {/* On every click on menu item */}
                 <li onClick={()=>{setMenu('home')}}><Link to ='/'>Home</Link>{menu==='home'?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu('home')}}><Link to ='/About'>About</Link>{menu==='about'?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu('tours')}}><Link to ='/AdditionalTours'>Additional Tours</Link>{menu==='tours'?<h/>:<></>}</li>
