@@ -7,6 +7,8 @@ import AdditionalTours from './pages/AdditionalTours';
 import About from './pages/About';
 import Cart from './pages/Cart';
 import LoginSignup from './pages/LoginSignup';
+//import TourDetails
+import TourDetails from './components/TourDetails';
 
 
 function App() {
