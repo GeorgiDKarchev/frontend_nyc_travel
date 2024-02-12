@@ -53,6 +53,10 @@ h1{
   margin-right: 50;
 }
 
+/* .bodyTours:hover {
+  background-color:bisque;
+} */
+
  
 /* Footer */
 .footer{
@@ -100,3 +104,9 @@ h1{
   height: 80vh;
   background-color: beige;
   padding-top: 100px;*/
+
+.additional{
+  background-color:beige;
+  height:500px;
+
+}
