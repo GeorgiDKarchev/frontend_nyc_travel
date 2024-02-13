@@ -3,16 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-// function Weather({w}){
-//     return(
-
-//         <div className="card">
-//             <h2>{w.tour_name}</h2>
-//         </div>
-
-//     );
-// }
-
 function Weather() {
   const [weather, setWeather] = useState([]);
   //useEffect
@@ -28,18 +18,21 @@ function Weather() {
     fetchData();
   }, []);
 
-  return (
-    <div className="Weather">
-      <h2>Current Weather condition </h2>
-      <div>
-        <div className="bodyTours">
-          {weather.map((weather) => {
-            return <Weather weather={weather} />;
-          })}
+//   const Home = ({tours}) => {
+    return (
+        <div>
+            <h1>Current weather</h1>
+            <div className="bodyTours">
+                {weather.length>=1?(
+                    weather.map((w) => <Weather w={w} key={w._id} />)
+                    ) : (
+                        <p>Loading.......</p>
+
+                )}
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
+
 
 export default Weather;

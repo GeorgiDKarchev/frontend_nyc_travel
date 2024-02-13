@@ -1,4 +1,3 @@
-
 import './App.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import NavBar from './components/NavBar';
@@ -8,7 +7,6 @@ import About from './pages/About';
 import Cart from './pages/Cart';
 import LoginSignup from './pages/LoginSignup';
 import Footer from './components/Footer'
-//                                                                                                                                                                    
 import React, { useEffect, useState } from "react";
 import { UserContext } from "./context/UserContext";
 import MemberPage  from './pages/MemberPage';
@@ -40,13 +38,13 @@ function App() {
         
         <Routes>
           <Route path='/' element={<Home tours={tours}/>}></Route>
-          {/* <Route path='/about' element={<About banner={banner}/>}></Route> */}
+          <Route path='/about' element={<About/>}></Route>
           <Route path='/additional-tours' element={<AdditionalTours/>}></Route>
             <Route path=':/tourId' element={<AdditionalTours/>}></Route>
           <Route path='/cart' element={<Cart/>}></Route>
-          <Route path="/" element={<LoginSignup setUser={setMember} />} />
+     
           <Route path="/signup" element={<SignupPage setUser={setMember} />} />
-          <Route path="/login" element={<SignupPage setUser={setMember} />} />
+          <Route path="/login" element={<LoginSignup setUser={setMember} />} />
           <Route path="/memberPage" element={<MemberPage user={member} setUser={setMember} />}
         />
         </Routes>  

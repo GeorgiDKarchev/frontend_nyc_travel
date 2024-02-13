@@ -51,7 +51,7 @@ const SignupPage = ({ setUser }) => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>{" "}
+          <label htmlFor="password">password:</label>{" "}
          
           <input
             type="text"
@@ -70,7 +70,7 @@ const SignupPage = ({ setUser }) => {
           />
         </div>
         <div>
-          <label htmlFor="age">Age:</label>
+          <label htmlFor="age">Age</label>
           <input
             type="text"
             id="age"

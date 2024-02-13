@@ -25,6 +25,7 @@
 }
 
 .body{
+
   
 }
 
@@ -79,7 +80,7 @@ h1{
 /* Footer */
 .footer{
   display: flex;
-  flex-direction: row;
+  
   align-items: center;  justify-content: center;
 
 
