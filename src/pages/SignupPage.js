@@ -3,9 +3,9 @@ import axios from "axios";
 
 const SignupPage = ({ setUser }) => {
   const [name, setName] = useState("");
-  //const [lastName, setLastName] = useState("");
+
   const [email, setEmail] = useState("");
-  //const [username, setUsername] = useState("");
+  
   const [password, setPassword] = useState("");
   const [photo, setPhoto] = useState("");
   const [age, setAge] = useState("");
@@ -15,7 +15,7 @@ const SignupPage = ({ setUser }) => {
     e.preventDefault();
     try {
       const res = await axios.post("http://localhost:4000/api/members", {
-        name,
+        member_name: name,
         email,
         password,
         photo,
