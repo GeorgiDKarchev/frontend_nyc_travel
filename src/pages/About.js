@@ -9,8 +9,10 @@ function About() {
   //useEffect
   useEffect(() => {
     const fetchData = async () => {
-      //   const res = await fetch("http://dataservice.accuweather.com/currentconditions/v1/349727?apikey=FSrkgDB0ufNDPv8sCGGRlm0AiEGEgKCs");
-      const res = await fetch("http://localhost:4000/api/tours");
+      //current weather condition in NYC
+        const res = await fetch("http://dataservice.accuweather.com/currentconditions/v1/349727?apikey=FSrkgDB0ufNDPv8sCGGRlm0AiEGEgKCs");
+      //1 day weather NYC
+      // const res = await fetch("http://dataservice.accuweather.com/forecasts/v1/daily/1day/349727?apikey=FSrkgDB0ufNDPv8sCGGRlm0AiEGEgKCs");
       const data = await res.json();
       console.log(data);
 
@@ -19,13 +21,15 @@ function About() {
     fetchData();
   }, []);
 
+
+
  
     return (
-        <div>
-            <h1>Current weather</h1>
+        <div className="">
+            <h1>Current weather in New York</h1>
             <div>
                 {weather?(
-                    weather.map((w) => <h3>{w.description}</h3>)
+                    weather.map((w) => <h3>{w.LocalObservationDateTime} - ( {w.WeatherText}  )</h3>)
                     ) : (
                         <p>Loading.......</p>
                 )}
