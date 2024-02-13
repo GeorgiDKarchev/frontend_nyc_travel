@@ -11,7 +11,7 @@ const Footer = () =>{
                  <li>About</li>
                  <li>Contact</li> 
              </ul>
-            <div>
+            <div className ="footer-social">
                 <div className="insta">
                     <img src={insta} alt=""/>
                 </div>

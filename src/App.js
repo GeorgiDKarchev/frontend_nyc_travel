@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import { UserContext } from "./context/UserContext";
 import MemberPage  from './pages/MemberPage';
 import SignupPage from './pages/SignupPage'
+import TourDetails from './components/TourDetails';
 //<Route path='/signup' element={<Signup/>}></Route>
 
 
@@ -38,9 +39,9 @@ function App() {
         
         <Routes>
           <Route path='/' element={<Home tours={tours}/>}></Route>
+          <Route path='/home/:id' element={<TourDetails/>}></Route>
           <Route path='/about' element={<About/>}></Route>
-          <Route path='/additional-tours' element={<AdditionalTours/>}></Route>
-            <Route path=':/tourId' element={<AdditionalTours/>}></Route>
+          <Route path='/AdditionalTours' element={<AdditionalTours/>}></Route>     
           <Route path='/cart' element={<Cart/>}></Route>
           <Route path="/" element={<LoginSignup setUser={setMember} />} />
           <Route path="/signup" element={<SignupPage setUser={setMember} />} />
@@ -48,7 +49,7 @@ function App() {
           <Route path="/memberPage" element={<MemberPage user={member} setUser={setMember} />}
         />
         </Routes>  
-        <Footer/>    
+        <Footer></Footer>    
       </BrowserRouter>
     </div>
   );

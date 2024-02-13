@@ -25,16 +25,21 @@ function About() {
 
  
     return (
-        <div className="">
-            <h1>Current weather in New York</h1>
-            <div>
+      <div className="weather">
+          <div className="weatherBox">
+            <div></div><h1>Current weather in New York City</h1>
+            <div className="weather">
                 {weather?(
-                    weather.map((w) => <h3>{w.LocalObservationDateTime} - ( {w.WeatherText}  )</h3>)
+                    weather.map((w) => 
+                    <h3> {w.WeatherText} - Temperature:( {w.Temperature.Metric.Value} )</h3>)
+                    // <WeatherItem weather={w} key={w} />)
                     ) : (
                         <p>Loading.......</p>
                 )}
             </div>
+            
         </div>
+      </div>
     );
 }
 
