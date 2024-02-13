@@ -22,7 +22,7 @@ const NavBar = () => {
             </ul>
             <div className='login'>
                 <Link to='/cart'><img className = 'shopping-cart' src='https://static.vecteezy.com/system/resources/previews/000/356/583/original/vector-shopping-cart-icon.jpg'></img></Link>
-                <Link to ='login'><button>Log in</button></Link>
+                <Link to ='/login'><button>Log in</button></Link>
             </div>
         </div>
     )
