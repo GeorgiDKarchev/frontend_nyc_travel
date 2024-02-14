@@ -28,12 +28,14 @@ function TourDetails() {
 
   }, [params.id]);
 
+
+////////////////////////////////////////////////
   //catching what is in the input fild
 const handelInput = (e) => {
     e.preventDefault();
-    const { name, value } = e.target;
-    console.log(name, value);
-    setTour({ ...tour, [name]: value });
+    const { price, value } = e.target;
+    console.log(price, value);
+    setTour({ ...tour, [price]: value });
   };
 
   //on submit(update)

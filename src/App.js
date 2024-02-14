@@ -35,9 +35,10 @@ function App() {
     <div >
       {/* Wrapping the application with BrowserRouter, to enable client-side routing */}
       <BrowserRouter>
-        <NavBar></NavBar>,
+        <NavBar></NavBar>
         
         <Routes>
+         
           <Route path='/' element={<Home tours={tours}/>}></Route>
           <Route path='/home/:id' element={<TourDetails/>}></Route>
           <Route path='/about' element={<About/>}></Route>

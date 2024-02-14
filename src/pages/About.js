@@ -12,7 +12,7 @@ function About() {
       //current weather condition in NYC
         const res = await fetch("http://dataservice.accuweather.com/currentconditions/v1/349727?apikey=FSrkgDB0ufNDPv8sCGGRlm0AiEGEgKCs");
       //1 day weather NYC
-      // const res = await fetch("http://dataservice.accuweather.com/forecasts/v1/daily/1day/349727?apikey=FSrkgDB0ufNDPv8sCGGRlm0AiEGEgKCs");
+      //const res = await fetch("http://dataservice.accuweather.com/forecasts/v1/daily/1day/349727?apikey=FSrkgDB0ufNDPv8sCGGRlm0AiEGEgKCs");
       const data = await res.json();
       console.log(data);
 
@@ -31,7 +31,12 @@ function About() {
             <div className="weather">
                 {weather?(
                     weather.map((w) => 
-                    <h3> {w.WeatherText} - Temperature:( {w.Temperature.Metric.Value} )</h3>)
+                    <h3> 
+                    Date: ( {w.LocalObservationDateTime} )
+                    <br/> Weather: {w.WeatherText}
+                    <br/>Temperature in F: {w.Temperature.Imperial.Value}
+                    <br/>Temperature in C: {w.Temperature.Metric.Value}</h3>,
+                    )
                     // <WeatherItem weather={w} key={w} />)
                     ) : (
                         <p>Loading.......</p>

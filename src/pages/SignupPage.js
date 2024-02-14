@@ -29,9 +29,9 @@ const SignupPage = ({ setUser }) => {
   };
 
   return (
-    <div>
+    <div className="signup">
       <h2>Create New Member Account</h2>
-      <form onSubmit={handleSignup}>
+      <form onSubmit={handleSignup} className="signupform">
         <div>
           <label htmlFor="Name">Name:</label>
           <input

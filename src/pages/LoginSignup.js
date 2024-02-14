@@ -30,7 +30,7 @@ function LoginSignup({ setUser }) {
     } catch (error) {
       console.log(error)
     }
-    console.log("Logged In");
+    // console.log("Logged In");
    
   };
 
