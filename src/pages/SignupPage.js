@@ -9,6 +9,9 @@ const SignupPage = ({ setUser }) => {
   const [password, setPassword] = useState("");
   const [photo, setPhoto] = useState("");
   const [age, setAge] = useState("");
+
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] =useState("");
   
 
   const handleSignup = async (e) => {
@@ -20,6 +23,8 @@ const SignupPage = ({ setUser }) => {
         password,
         photo,
         age,
+        phone,
+        address,
       });
       console.log(res.data);
       setUser(res.data);
@@ -78,6 +83,28 @@ const SignupPage = ({ setUser }) => {
             onChange={(e) => setAge(e.target.value)}
           />
         </div>
+
+        <div>
+          <label htmlFor="phone">Phone</label>
+          <input
+            type="text"
+            id="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+        </div>
+
+
         <button type="submit">Sign Up</button>
       </form>
     </div>

@@ -85,21 +85,26 @@ const handelDelete = async (id) => {
   };
 
   return (
-    <div>
+    <div className="TourDetails">
       {tour && (
         <>
             <h3>Tour details</h3>
             <h4>{tour.tour_name}</h4>
-            <h4>{tour.description}</h4>
-            <img src={`${tour.img_src}`}/>
-            <h4>{tour.notes}</h4>
+            <div className="imageDescription">
+              <img src={`${tour.img_src}`}/>
+              <h4>{tour.description}</h4>
+              
+            </div>
+
+            <label for="Notes">Notes</label>
+            <input className='notesTours' type="text"value={tour.notes}/>
             <Link to={`/home/${tour.tour_name}`}></Link> 
             
             
-            <label for="price">price</label>
-            <input type="text"value={tour.price} onChange={handelInput}/>
-            <button>Update onSubmit{handelSubmit}</button> 
-            <button>Delete onSubmit{handelDelete}</button>  
+            <label for="price">Current Price for this Tour</label>
+            <input  type="text"value={tour.price} onChange={handelInput}/>
+            <button>Update {handelSubmit}</button> 
+            <button>Delete {handelDelete}</button>  
         </>
       )}
     </div>

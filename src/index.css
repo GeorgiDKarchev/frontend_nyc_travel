@@ -186,7 +186,7 @@ h1{
   display:flex;
   flex-direction: column;
   align-items: center;
-  
+
   min-height:100vh;
   display:flex;
   flex-direction:column;
@@ -259,3 +259,40 @@ h1{
   border:1px solid rgb(44, 40, 40);
   background-color: beige;
  }
+.container{
+ min-height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.TourDetails{
+  min-height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+}
+.notesTours{
+  height:100px;
+  width:700px;
+  background-color: rgb(246, 235, 211);
+}
+
+.imageDescription{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:40px;
+  margin:50px;
+
+}
+.imageDescription h4{
+  border:1px solid black;
+  
+}
