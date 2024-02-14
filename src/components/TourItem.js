@@ -26,7 +26,7 @@ function TourItem({ tour }) {
           <Card.Title>{tour_name}</Card.Title>
           <Card.Text style={{ decoration: "None" }}>{description}</Card.Text>
           <Card.Text>Price: {price}</Card.Text>
-          <button variant="primary">Book this tour</button>
+          <button variant="primary">Modify tour info</button>
         </Card.Body>
       </Link>
     </Card>

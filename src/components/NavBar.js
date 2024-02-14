@@ -12,7 +12,7 @@ const NavBar = () => {
         <div className='navbar'>
             <div className='nycLogo'>
                 <img className = 'logo-pic' src='https://th.bing.com/th/id/R.73b0d5950705dc343a8552079d256e50?rik=PnUlTMbKS2awvA&pid=ImgRaw&r=0' />
-                <p>NYC Travel A</p>
+                <p>NYC Travel Tours </p>
             </div>
             <ul className='navMenu'>
                 {/* On every click on menu item, a line will uppear under it */}

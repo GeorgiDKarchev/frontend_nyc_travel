@@ -43,10 +43,9 @@ function App() {
           <Route path='/about' element={<About/>}></Route>
           <Route path='/AdditionalTours' element={<AdditionalTours/>}></Route>     
           <Route path='/cart' element={<Cart/>}></Route>
-          <Route path="/" element={<LoginSignup setUser={setMember} />} />
           <Route path="/signup" element={<SignupPage setUser={setMember} />} />
           <Route path="/login" element={<LoginSignup setUser={setMember} />} />
-          <Route path="/memberPage" element={<MemberPage user={member} setUser={setMember} />}
+          <Route path="/memberPage" element={<MemberPage setUser={member} />}
         />
         </Routes>  
         <Footer></Footer>    

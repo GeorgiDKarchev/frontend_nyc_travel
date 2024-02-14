@@ -18,14 +18,15 @@ function LoginSignup({ setUser }) {
       const res = await axios.post('http://localhost:4000/api/members/login', {
         email,
         password,
-      });
+      })
+      if (res.status === 200){
+        navigate('/memberPage')
+      }else{
+        navigate('/')
+      }
       console.log(res.data);
       setUser(res.data);
-    //   if (res.data){
-    //     navigate('/memberPage')
-    //   }else{
-    //     navigate('/signup')
-    //   }
+    
     } catch (error) {
       console.log(error)
     }

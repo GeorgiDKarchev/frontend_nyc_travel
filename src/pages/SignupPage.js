@@ -30,7 +30,7 @@ const SignupPage = ({ setUser }) => {
 
   return (
     <div>
-      <h2>Create Account</h2>
+      <h2>Create New Member Account</h2>
       <form onSubmit={handleSignup}>
         <div>
           <label htmlFor="Name">Name:</label>
