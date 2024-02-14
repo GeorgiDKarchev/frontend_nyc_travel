@@ -198,8 +198,18 @@ h1{
   min-height:100vh;
   display:flex;
   flex-direction:column;
+
  
 }
+/* .weatherBox{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;;
+  border:1px solid rgb(44, 40, 40);
+  background-color: beige;
+} */
 .weather h3{
   display:flex;
   justify-content: center;

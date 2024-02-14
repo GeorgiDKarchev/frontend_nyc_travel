@@ -22,7 +22,7 @@ function App() {
   //useEffect
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:4000/api/tours");
+      const res = await fetch("https://backend-nyc-travel.onrender.com/api/tours");
       const data = await res.json();
       console.log(data);
       //set the data to the state tours variable

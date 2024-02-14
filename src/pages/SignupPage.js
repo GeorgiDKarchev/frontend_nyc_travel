@@ -17,7 +17,7 @@ const SignupPage = ({ setUser }) => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:4000/api/members", {
+      const res = await axios.post("https://backend-nyc-travel.onrender.com/members", {
         member_name: name,
         email,
         password,
@@ -65,7 +65,7 @@ const SignupPage = ({ setUser }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div>
+        {/* <div>
           <label htmlFor="photo">Photo:</label>
           <input
             type="text"
@@ -73,7 +73,7 @@ const SignupPage = ({ setUser }) => {
             value={photo}
             onChange={(e) => setPhoto(e.target.value)}
           />
-        </div>
+        </div> */}
         <div>
           <label htmlFor="age">Age</label>
           <input

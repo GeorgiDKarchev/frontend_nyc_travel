@@ -25,9 +25,9 @@ function About() {
 
  
     return (
-      <div className="weather">
+      <div className="weatherPge">
           <div className="weatherBox">
-            <div></div><h1>Current weather in New York City</h1>
+            <h1>Current weather in New York City</h1>
             <div className="weather">
                 {weather?(
                     weather.map((w) => 
