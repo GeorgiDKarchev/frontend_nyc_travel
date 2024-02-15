@@ -1,6 +1,9 @@
+
+
 import React from "react"
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 
 
@@ -10,7 +13,10 @@ function TourDetails() {
   
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  
+  const [values, setValues] =useState({
+    id : params.id,
+    price : '',
+  })
 
   useEffect(() => {
     // func to fetch a tour by the id
@@ -28,83 +34,66 @@ function TourDetails() {
 
   }, [params.id]);
 
+//Update tour price  
+useEffect(()=>{
+  
+  axios.get(`http://localhost:4000/api/tours/${params.id}`)
+  
+  .then(res => 
+    setValues({...values, price: res.data.price})
+    )
+  .catch(err=> console.log(err))
+   
+},[])
 
-////////////////////////////////////////////////
-  //catching what is in the input fild
-const handelInput = (e) => {
-    e.preventDefault();
-    const { price, value } = e.target;
-    console.log(price, value);
-    setTour({ ...tour, [price]: value });
-  };
+const handleSubmit =(e) => {
+  e.preventDefault();
+  axios.put(`http://localhost:4000/api/tours/${params.id}`, values)
+  
+  .then(res => 
+    console.log(res),
+    )
+  .catch(err=> console.log(err))
 
-  //on submit(update)
-const handelSubmit = (e) => {
-    e.preventDefault();
+}
 
-    fetch(`http://localhost:4000/api/tours/${params.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(tour),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setIsLoading(true);
-        navigate("/");
-      })
-      .catch((error) => {
-        setIsLoading(false);
-      })
-  };
-//when click a delete button
-const handelDelete = async (id) => {
-    console.log("id : -", id);
-    setIsLoading(true);
-    try {
-        //curent tour description
-        const response = fetch(`http://localhost:4000/api/tours/${params.id}`, {
-        method: "DELETE",
-      });
-      if (!response.ok) {
-        throw new Error("Failed to delete item");
-      }
-      setTour(tour.id !== id);
-      //setTour(tour.filter((item) => item.id !== id));
-    } catch (error) {
-      
-    } finally {
-      setIsLoading(false);
-    }
-  };
+//Delete
 
+const handleDelete =(e)=>{
+  axios.delete(`http://localhost:4000/api/tours/${params.id}`)
+  .then(res => 
+    console.log('Delete!', res),
+    )
+  .catch(err=> console.log(err))
+
+  
+
+}
   return (
     <div className="TourDetails">
       {tour && (
         <>
             <h3>Tour details</h3>
             <h4>{tour.tour_name}</h4>
+           
             <div className="imageDescription">
               <img src={`${tour.img_src}`}/>
               <h4>{tour.description}</h4>
-              
             </div>
 
+            {/* notes section added */}
             <label for="Notes">Notes</label>
             <input className='notesTours' type="text"value={tour.notes}/>
+            <h4>{tour.notes}</h4>
+            
             <Link to={`/home/${tour.tour_name}`}></Link> 
             
-            
-            <label for="price">Current Price for this Tour</label>
-            <input  type="text"value={tour.price} onChange={handelInput}/>
-            <button>Update {handelSubmit}</button> 
-            <button>Delete {handelDelete}</button>  
+            <form onSubmit={handleSubmit}>
+              <label >Price</label>
+              <input type="text" value={values.price} onChange={e=> setValues({...values, price: e.target.value})}/>
+              <button>Update </button> 
+              <button onClick={(e) => handleDelete(params.id)}>Delete </button> 
+            </form>
         </>
       )}
     </div>
@@ -112,3 +101,6 @@ const handelDelete = async (id) => {
 }
 
 export default TourDetails;
+
+
+

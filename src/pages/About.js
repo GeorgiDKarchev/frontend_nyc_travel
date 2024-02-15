@@ -25,7 +25,7 @@ function About() {
 
  
     return (
-      <div className="weatherPge">
+      <div className="weatherPage">
           <div className="weatherBox">
             <h1>Current weather in New York City</h1>
             <div className="weather">

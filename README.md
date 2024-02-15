@@ -1,94 +1,73 @@
+Frontend folder connect to to Backend - https://github.com/GeorgiDKarchev/backend_nyc_travel
+
+***** ABOUT THIS PROJECT *****
+
+Creating a travel application - NYC_TRAVEL.
+The current website is for Admin (members) who have access to the DB.
+When registered member is logged in and is redirected to the MembersPage.
+If no registered email and password match the DB Create Account link redirect the user to 
+Signup page where registation form is presented.
+
+Im Home page registered Member can see all listed tour packages and when select the button -Modify tour info is being redirected to another page where can update the selected tour package price , leave notes and delete the selected tour package from the DB.
+In About page the registered member (user) can see current weather condition in NYC from AccuWeather API.
+AdditionalTours page display email for contact information and message that additional tour packages will we added in the future (in this page will be posted future or upcoming tours that need modification for price ,info, picture ...)
+Shopping card icon in the Navbar is future page where will be published information about the bookings of each tour and aditional metrics about the past sales of each tour.
 
 
-Creating a travel application where users can select different tours around NYC.
+****Technologies used to create this project ***
+//Frontend//
+- CSS
+- Bootstrap
+- JavaScript
+- React
+- Axios anf Fetch for fetching data
+- Node.js
+- React Router Dom
 
-Trello link -  https://trello.com/invite/b/3FYORb7V/ATTIe4eefc144448b20d1a99ae2115c83829525B56DB/nyctravelapp
-
-
-Frontend folder tolk to backend - https://github.com/GeorgiDKarchev/backend_nyc_travel
-
-
-
-
-
-
-
-
-
-
+//Backend//
+- Express
+- MongoDB / Mongoose
+- Bcrypt for password hashing
 
 
+***  Resourses used for this project  ***
+
+- Images - https://www.pexels.com/
+- Project Management - https://trello.com/invite/b/3FYORb7V/ATTIe4eefc144448b20d1a99ae2115c83829525B56DB/nyctravel
+- Wireframe - https://app.diagrams.net/
+Wireframe: ![Wireframe_main_page](https://github.com/GeorgiDKarchev/backend_nyc_travel/assets/149124620/9d00bc03-7bc5-4aa7-968f-0f8112adb2e1)
+
+
+****References***
+
+- PerScholas.instructure.com
+- https://developer.mozilla.org/en-US/
+
+
+*****Technical assistance and guidelines during the project***
+
+Teaching instructors - Abraham Tavarez and Colton Wright
+
+
+*****Future development for this application****
+- Additional functionality will be added to the application
+- Additional website will be created only for users where they can book tours, request more information, customize specific features that each tour offers based on their personal preferences.
 
 
 
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

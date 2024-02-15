@@ -17,7 +17,7 @@ const SignupPage = ({ setUser }) => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://backend-nyc-travel.onrender.com/members", {
+      const res = await axios.post("http://localhost:4000/api/members", {
         member_name: name,
         email,
         password,
@@ -38,12 +38,13 @@ const SignupPage = ({ setUser }) => {
       <h2>Create New Member Account</h2>
       <form onSubmit={handleSignup} className="signupform">
         <div>
-          <label htmlFor="Name">Name:</label>
+          <label htmlFor="Name" >Name:</label>
           <input
             type="text"
             id="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            placeholder="       Required"
           />
         </div>
         <div>
@@ -56,13 +57,14 @@ const SignupPage = ({ setUser }) => {
           />
         </div>
         <div>
-          <label htmlFor="password">password:</label>{" "}
+          <label htmlFor="password">Password:</label>{" "}
          
           <input
             type="text"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="       Required"
           />
         </div>
         {/* <div>
